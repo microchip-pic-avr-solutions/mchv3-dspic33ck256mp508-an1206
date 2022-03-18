@@ -4,10 +4,10 @@
    "content":{
       "metaDataVersion":"1.3.0",
       "name":"com.microchip.mplabx.project.mchv3-dspic33ck256mp508-an1206",
-      "version":"x.x.x",
-      "displayName":"xxxxxxxxxxxxxxx",
+      "version":"1.0.0",
+      "displayName":"AN1206 dspic33ck256mp508 MCHV3",
       "projectName":"mchv3-dspic33ck256mp508-an1206",
-      "shortDescription":"xxxxxxxxxxxxxxx",
+      "shortDescription":"Sensorless FOC (PLL estimator) of AC induction motor with field weakening",
       "ide":{
          "name":"MPLABX",
          "semverRange":">=5.40.0"
@@ -17,8 +17,8 @@
          "semverRange":"^1.50.0"
       },
       "dfp":{
-         "name":"xxxxxxxxxxxxxxx",
-         "semverRange":">=x.x.x"
+         "name":"dsPIC33CK-MP_DFP",
+         "semverRange":">=1.4.102"
       },
 	  "configurator": {
          "name": "MCC",
@@ -30,16 +30,20 @@
          "content":{
             "metaDataVersion":"1.0.0",
             "category":"com.microchip.device",
-            "name":"xxxxxxxxxxxxxxx",
+            "name":"dsPIC33CK256MP508",
             "versionRange":"*"
          }
       },
 	  "peripherals":[
          "GPIO",
+		 "ADC",
+		 "PWM"
       ],
       "keywords":[
-         "GPIO",
-         "UART"
+         "Motor Control",
+		 "ACIM",
+		 "FOC",
+		 "PLL"
       ]
    }
 }
