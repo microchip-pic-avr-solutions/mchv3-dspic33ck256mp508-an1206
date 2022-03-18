@@ -2,3 +2,7 @@
 	path = mchv3_dspic33ck256mp508_an1206/library/library-motor
 	url = https://github.com/microchip-pic-avr-solutions/library-motor
 	branch = master
+[submodule "mchv3_dspic33ck256mp508_an1206/library/library-x2cscope"]
+	path = mchv3_dspic33ck256mp508_an1206/library/library-x2cscope
+	url = https://github.com/microchip-pic-avr-solutions/library-x2cscope
+	branch = master
