@@ -9,10 +9,8 @@ This document describes the setup requirements for running the Sensor-less FOC a
 The demonstration is configured to run on either the dsPICDEM™ MCHV-2 Development Board or the dsPICDEM™ MCHV-3 Development Board in the Internal Op-Amp configuration with the dsPIC33CK256MP508 Internal Op-Amp Motor Control Plug-In Module (PIM).
 </p>
 
-
-- For more details refer [Test](../mchv3_dspic33ck256mp508_an1206/mchv3_dspic33ck256mp508_an1206/docs/README_external.md)
-
-- For more details refer [Test](mchv3_dspic33ck256mp508_an1206/docs/README_external.md)
+- Readme document for external op-amp configuration [Readme for external opamp](mchv3_dspic33ck256mp508_an1206/docs/README_external.md)
+- Readme document for internal op-amp configuration [Readme for internal opamp](mchv3_dspic33ck256mp508_an1206/docs/README_internal.md)
 
 ## Summary
 

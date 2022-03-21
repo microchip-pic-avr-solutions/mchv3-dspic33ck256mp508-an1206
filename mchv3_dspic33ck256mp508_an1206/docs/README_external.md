@@ -58,10 +58,6 @@ Refer dsPICDEM™ MCHV-2 Development Board User’s Guide or dsPICDEM™ MCHV-3 
 <p align="center">
   <img src="../../images/matrixboard.PNG">
 </p>
-
-![image](../../images/matrixboard.PNG)
-
-
 <p style='text-align: justify;'>
 6.	Alternatively, connect the Microchip programmer/debugger MPLAB PICkit 4 In-Circuit De-bugger to the Connector J10 of the dsPIC33CK Low Voltage Motor Control Board as shown below and to the Host PC used for programming the device. Ensure that PICkit 4 is connected in correct orientation.</p>
 
