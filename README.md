@@ -12,6 +12,8 @@ The demonstration is configured to run on either the dsPICDEM™ MCHV-2 Developm
 
 - For more details refer [Test](../mchv3_dspic33ck256mp508_an1206/mchv3_dspic33ck256mp508_an1206/docs/README_external.md)
 
+- For more details refer [Test](mchv3_dspic33ck256mp508_an1206/docs/README_external.md)
+
 ## Summary
 
 
