@@ -36,11 +36,10 @@ To set up the demonstration, you may use one of the High-Voltage Motor Control D
 <p style='text-align: justify;'>This section describes hardware setup required for the demonstration. Motor phase current feed-backs needed by the firmware are amplified by the operational amplifiers that are External to the dsPIC33CK256MP508. This is referred as ‘External amplifier configuration’.</p>
 <p style='text-align: justify;'>
 Refer dsPICDEM™ MCHV-2 Development Board User’s Guide or dsPICDEM™ MCHV-3 Development Board User’s Guide, for any clarification while setting up the hardware.</p>
-
-1. <p style='text-align: justify;'> Before making any connection, verify that the Development Board is not powered and it is fully discharged. This can be done by checking if Power on Status LED D13(Red) is off.
+<p style='text-align: justify;'>
+1.  Before making any connection, verify that the Development Board is not powered and it is fully discharged. This can be done by checking if Power on Status LED D13(Red) is off.</p>
 <p style='text-align: justify;'> 
-
-2. Open the top cover of the enclosure and set up the following jumpers (if they are not in specified positions):</p> 
+2.  Open the top cover of the enclosure and set up the following jumpers (if they are not in specified positions):</p> 
 
 
 | Jumper|Pins to Short|Board Reference |Remarks|
@@ -52,38 +51,17 @@ Refer dsPICDEM™ MCHV-2 Development Board User’s Guide or dsPICDEM™ MCHV-3 
 | PWM OUTPUTS   | ENABLE position |![image](../../images/jumper1.PNG) |These Jumpers can be accessed without opening the enclosure, from the front side of the board(or enclosure).|
 | USB   | FOR USB position |![image](../images/jumper3.PNG) ||
 <br />
+<p style='text-align: justify;'>
+3.  Connect the three phase wires from the motor to M1, M2, and M3 terminals of connector J17(there is no specific order), provided on the Development Board..</p>
+<p style='text-align: justify;'>
+4.	Insert the ‘External Op Amp Configuration Matrix board’ into matrix board header J4. Ensure the matrix board is correctly oriented before proceeding.</p>
+<p align="center">
+  <img src="../../images/matrixboard.PNG">
+</p>
 
 ![image](../../images/matrixboard.PNG)
 
-<p style='text-align: justify;'>
 
-
-<br />
-
-# Ignore the contents below
-
-
-
-
-
-
-<p align="center">
-  <img  src="../../images/matrixboard.png"></p>
- <p align = "center"><font size="2"> Figure 3  Hall sensor Connection diagram
-</p> 
-<p style='text-align: justify;'>
-3.	Connect the three phase wires from the motor to M1, M2, and M3 terminals of connector J17(there is no specific order), provided on the Development Board..</p>
-<br />
-<p align="center">
-  <img  src="images/lvmcpowersupplyconnector.png"></p>
- <p align = "center"><font size="2"> Figure 4  LVMC Power Supply Connector
-</p> 
-<p style='text-align: justify;'>
-5.	The board has an on-board programmer ‘PICKIT™ On Board (PKOBv4)”, which can be used for programming or debugging dsPIC33CK256MP508 device. To use on-board programmer, connect a micro USB cable between Host PC and Connector J13 provided on the dsPIC33CK Low Voltage Motor Control Board.</p>
-<p align="center">
-  <img  src="images/lvmcpkob.png"></p>
- <p align = "center"><font size="2"> Figure 5  LVMC PKOB4
-</p> 
 <p style='text-align: justify;'>
 6.	Alternatively, connect the Microchip programmer/debugger MPLAB PICkit 4 In-Circuit De-bugger to the Connector J10 of the dsPIC33CK Low Voltage Motor Control Board as shown below and to the Host PC used for programming the device. Ensure that PICkit 4 is connected in correct orientation.</p>
 
