@@ -54,12 +54,14 @@ Refer dsPICDEM™ MCHV-2 Development Board User’s Guide or dsPICDEM™ MCHV-3 
 <br />
 <p style='text-align: justify;'>
 3.  Connect the three phase wires from the motor to M1, M2, and M3 terminals of connector J17(there is no specific order), provided on the Development Board..</p>
+<p align="center">
+  <img src="../../images/motorconnection.PNG">
+</p>
 <p style='text-align: justify;'>
 4.	Insert the ‘External Op Amp Configuration Matrix board’ into matrix board header J4. Ensure the matrix board is correctly oriented before proceeding.</p>
 <p align="center">
   <img src="../../images/matrixboard.PNG">
 </p>
-<p style='text-align: justify;'>
 
 ## SOFTWARE SETUP AND RUN
 ### Setup: MPLAB X IDE and MPLAB XC16 Compiler
