@@ -1,6 +1,6 @@
 ![image](../../images/microchip.jpg) 
 
-# MCHV3 DSPIC33CK256MP508 AN1206
+# AN1206 Demonstration ReadMe for the dsPICDEM™ MCHV-2 Development Board or dsPICDEM™ MCHV-3 Development Board with the dsPIC33CK256MP508 External Op-Amp Motor Control PIM(MPLAB® X IDE)
 
 ## INTRODUCTION
 <p style='text-align: justify;'>
@@ -8,20 +8,6 @@ This document describes the setup requirements for running the Sensor-less FOC a
 <p style='text-align: justify;'>
 The demonstration is configured to run on either the dsPICDEM™ MCHV-2 Development Board or the dsPICDEM™ MCHV-3 Development Board in the Internal Op-Amp configuration with the dsPIC33CK256MP508 Internal Op-Amp Motor Control Plug-In Module (PIM).
 </p>
-
-##  Action needed (Ignore for now)
-
-<p style='text-align: justify;'>BLDC motors are basically inside-out DC motors. In a DC motor the stator is a permanent magnet. The rotorhas the windings, which are excited with a current.The current in the rotor is reversed to create a rotating or moving electric field by means of a split commutator and brushes. On the other hand, in a BLDC motor the windings are on the stator and the rotor is a permanent magnet. Hence the term inside-out DC motor.To make the rotor turn, there must be a rotating electric field. Typically a three-phase BLDC motor has three stator phases that are excited two at a time to create a rotating electric field. This method is fairly easy to implement, but to prevent the permanent magnet rotor from getting locked with the stator, the excitation on the stator must be sequenced in a specific manner while knowing the exact position of the rotor magnets.Position information can be gotten by either a shaft encoder or, more often, by Hall effect sensors that detect the rotor magnet position. For a typical threephase, sensored BLDC motor there are six distinct regions or sectors in which two specific windings are excited. 
-These are as shown in Figure 1.</p>
-
-![image](../../images/jumper1.PNG)
-
-<p align="center">
-  <img  src="images/jumper1.png"></p>
-
-
-<p style='text-align: justify;'>By reading the Hall effect sensors, a 3-bit code can be obtained with values ranging from 1 to 6.Each code value represents a sector on which the rotor is presently located. Each code value, therefore, gives us information on which windings need to be excited.Thus a simple lookup table can be used by the program to determine which two specific windings to excite and, thus, turn the rotor.
-Note that state ‘0’ and ‘7’ are invalid states for Hall effect sensors. Software should check for these values and appropriately disable the PWM.</p>
 
 ## Hardware Connection and Running the Demo Code
 
@@ -82,11 +68,11 @@ Refer dsPICDEM™ MCHV-2 Development Board User’s Guide or dsPICDEM™ MCHV-3 
 
 
 <p align="center">
-  <img  src="images/matrixboard.png"></p>
+  <img  src="../../images/matrixboard.png"></p>
  <p align = "center"><font size="2"> Figure 3  Hall sensor Connection diagram
 </p> 
 <p style='text-align: justify;'>
-4.	Plug in the 24V power supply to connector J1 or J2 provided on the dsPIC33CK Low Voltage Motor Control Board.</p>
+3.	Connect the three phase wires from the motor to M1, M2, and M3 terminals of connector J17(there is no specific order), provided on the Development Board..</p>
 <br />
 <p align="center">
   <img  src="images/lvmcpowersupplyconnector.png"></p>
