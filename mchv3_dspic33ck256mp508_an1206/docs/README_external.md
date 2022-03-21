@@ -45,12 +45,12 @@ Refer dsPICDEM™ MCHV-2 Development Board User’s Guide or dsPICDEM™ MCHV-3 
 
 | Jumper|Pins to Short|Board Reference |Remarks|
 | :--------:| :-----------:|:-----------------:|:---------------:|
-|J11        |3-4 | ![image](images/jumper1.png)|These Jumpers are present on the Development Board. These can be accessed only after opening the top cover of the enclosure.|
+|J11        |3-4 | ![image](../../images/jumper1.png)|These Jumpers are present on the Development Board. These can be accessed only after opening the top cover of the enclosure.|
 |J12|1-2|||
 | J12   | 1-2   | ||
 | J14   | 1-2 | ||
 | PWM OUTPUTS   | ENABLE position |![image](../../images/jumper1.PNG) |These Jumpers can be accessed without opening the enclosure, from the front side of the board(or enclosure).|
-| USB   | FOR USB position |![image](../images/jumper3.PNG) ||
+| USB   | FOR USB position |![image](../../images/jumper3.PNG) ||
 <br />
 <p style='text-align: justify;'>
 3.  Connect the three phase wires from the motor to M1, M2, and M3 terminals of connector J17(there is no specific order), provided on the Development Board..</p>
@@ -60,13 +60,6 @@ Refer dsPICDEM™ MCHV-2 Development Board User’s Guide or dsPICDEM™ MCHV-3 
   <img src="../../images/matrixboard.PNG">
 </p>
 <p style='text-align: justify;'>
-6.	Alternatively, connect the Microchip programmer/debugger MPLAB PICkit 4 In-Circuit De-bugger to the Connector J10 of the dsPIC33CK Low Voltage Motor Control Board as shown below and to the Host PC used for programming the device. Ensure that PICkit 4 is connected in correct orientation.</p>
-
-<p align="center">
-  <img  src="images/lvmcprogrammingconnector.png"></p>
- <p align = "center"><font size="2"> Figure 6  LVMC Programming Connector
-</p> 
-<br />
 
 ## SOFTWARE SETUP AND RUN
 ### Setup: MPLAB X IDE and MPLAB XC16 Compiler
