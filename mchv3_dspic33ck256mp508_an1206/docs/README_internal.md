@@ -148,13 +148,13 @@ Follow below instructions step by step to setup and run the motor control demo a
 <p style='text-align: justify;'>
 2. Set the project acim.X as main project by right clicking on the project name and selecting “Set as Main Project” as shown. The project “acim” will then appear in bold.</p>
  <p align="center">
-  <img  src="../../images/idesetasmainproject.png">
+  <img  src="../../images/idesetasmainproject.PNG">
   </p>
 
  <p style='text-align: justify;'>
 3. Open userparams.h (under acim.X -> headerfiles) in the project acim.X and ensure that OPEN_LOOP_FUNCTIONING, and TORQUE_MODE is not defined. </p>
   <p align="center">
-  <img  src="../../images/undefopenloop.png">
+  <img  src="../../images/undefopenloop.PNG">
   </p>
    <p style='text-align: justify;'>
 Define the Macro OPEN_LOOP_FUNCTIONING, if the motor must run in Open loop (V/F) Control mode. If the Macro OPEN_LOOP_FUNCTIONING is defined, then motor will run in sensor less FOC Control mode.</p>
@@ -164,13 +164,13 @@ Define the Macro TORQUE_MODE, if the motor must run in Torque Control mode. If t
 <p style='text-align: justify;'>
 4. Open userparams.h (under acim.X -> headerfiles) in the project acim.X and ensure INTERNAL_OPAMP_CONFIGPIM is undefined as this demonstration is for Internal Op-Amp configuration.</p>
   <p align="center">
-  <img  src="../../images/undefinternalopamp.png">
+  <img  src="../../images/undefinternalopamp.PNG">
   </p>
 
   <p style='text-align: justify;'>
 5. Open userparams.h (under acim.X -> headerfiles) in the project acim.X and ensure the required Motor is defined and the Board and Motor parameters are corre-sponding to Internal Op-Amp design from the tuning parameter excel sheet in docs folder</p>
  <p align="center">
-  <img  src="../../images/internalconfigsetup.png">
+  <img  src="../../images/internalconfigsetup.PNG">
   </p>
 
 ### **Parameters to Enter in the tuning parameter excel sheet:**
@@ -204,25 +204,25 @@ Enter the Motor Actual parameters and Generated parameters from tuning parameter
 
 - After selecting Hardware Tool and Compiler Toolchain, click button Apply
  <p align="center">
-  <img  src="../../images/projectpropertiessetup.png">
+  <img  src="../../images/projectpropertiessetup.PNG">
   </p>
 <p style='text-align: justify;'>
 7. To build the project (in this case acim.X) and program the device dsPIC33CK256MP508, click “Make and Program Device Main project” on the toolbar.</p>
  <p align="center">
-  <img  src="../../images/deviceprogramming.png">
+  <img  src="../../images/deviceprogramming.PNG">
   </p>
  <p style='text-align: justify;'> 
 8. If the device is successfully programmed, LED D2 will be turned ON, indicating that the dsPIC® DSC is enabled.</p> 
 <p style='text-align: justify;'>
 9. Run or Stop the motor by pressing the push button S1(labeled as “PUSHBUTTON”) on the front panel of the Board. The function of the pushbutton (Run/Stop of the motor) is indicated by turning ON or OFF LED D19.</p>
  <p align="center">
-  <img  src="../../images/pushbutton.png">
+  <img  src="../../images/pushbutton.PNG">
   </p>
  <p style='text-align: justify;'>
 10. If desired, the motor speed can be varied using the potentiometer (labeled “POT”).</p>
 
   <p align="center">
-  <img  src="../../images/potentiometer.png"></p>
+  <img  src="../../images/potentiometer.PNG"></p>
 <p style='text-align: justify;'>
 11.	Press push button S1(labeled as “PUSHBUTTON” on the front panel of the Board) to stop
 the motor.</p>
@@ -239,67 +239,67 @@ The application firmware comes with initialization required to interface Control
 2. <p style='text-align: justify;'>Ensure X2C Scope Plug-in is installed. Look for X2C Scope under Tools>Embedded. If you do not see it, follow instructions provided in the section Setup: to install the plug-in.</p>
 
  <p align="center">
-  <img  src="../../images/x2cselection.png"></p>
+  <img  src="../../images/x2cselection.PNG"></p>
 
 3.	<p style='text-align: justify;'>To utilize X2C Scope communication for this demonstration, a USB connection is re-quired between Host PC and the Development Board. Connect a mini-USB cable from your computer to the J6 connector (labeled as “USB” on the front panel of the board enclosure) of the Development Board.</p>
  <p align="center">
-  <img  src="../../images/usbjumper.png"></p>
+  <img  src="../../images/usbjumper.PNG"></p>
 
 4.	<p style='text-align: justify;'>Ensure application is configured and running as described under Section Basic Demonstration by following steps 1 through 11.</p>
 5.	<p style='text-align: justify;'>Build the project acim.X. To do that right click on the project acim.X and select “Clean and Build”.</p>
  <p align="center">
-  <img  src="../../images/cleanandbuild.png"></p>
+  <img  src="../../images/cleanandbuild.PNG"></p>
 
 6.	<p style='text-align: justify;'>Please ensure that the checkbox “Load symbols when programming or building for pro-duction (slows process)” is checked, which is under the “Loading” category of the Project Properties window</p>
  <p align="center">
-  <img  src="../../images/loadsymbols.png"></p>
+  <img  src="../../images/loadsymbols.PNG"></p>
 
 7. <p style='text-align: justify;'>To build the project (in this case acim.X) and program the device dsPIC33CK256MP508, click “Make and Program Device Main project” on the toolbar.</p>
  <p align="center">
-  <img  src="../../images/programming2.png"></p>
+  <img  src="../../images/programming2.PNG"></p>
 
 8.	<p style='text-align: justify;'>Open the X2C window by selecting Tools>Embedded>X2CScope.</p>
 
  <p align="center">
-  <img  src="../../images/x2cwindowopen.png"></p>
+  <img  src="../../images/x2cwindowopen.PNG"></p>
 
 9.	<p style='text-align: justify;'>Open the X2CScope Configuration window and in “Select project” menu, select acim project as shown.</p>
 
  <p align="center">
-  <img  src="../../images/x2cprojectselection.png"></p>
+  <img  src="../../images/x2cprojectselection.PNG"></p>
 
 10.	<p style='text-align: justify;'>Remote Communication needs to be established, as indicated in the following figure. Ensure the communication baud rate is set to 115200 as the same is set in the application firmware, while COM port used depends on the system settings. Refresh button lists the available COM Ports. Select the COM Port as per the connection.</p>
  <p align="center">
-  <img  src="../../images/x2cconnectionsetup.png"></p>
+  <img  src="../../images/x2cconnectionsetup.PNG"></p>
   
 11.	<p style='text-align: justify;'>Once COM port detected, click on “Disconnected”, and it will be turn into “Connected”, if the link is established as programmed.</p>
   <p align="center">
-  <img  src="../../images/x2cconnection.png"></p>
+  <img  src="../../images/x2cconnection.PNG"></p>
 
 12.	<p style='text-align: justify;'>Set the “Project Setup” as shown below and click “Set Values”. Set Scope sample time as interval at which X2CScopeUpdate() is called. In this application it is every 20kHz (50µs).</p>
  <p align="center">
-  <img  src="../../images/x2cprojectsetup.png"></p>
+  <img  src="../../images/x2cprojectsetup.PNG"></p>
 
 13.	<p style='text-align: justify;'>When the setup is established, click on open scope View (under sub window “Data Views”), this open Scope Window.</p>
 
  <p align="center">
-  <img  src="../../images/x2cdataview.png"></p>  	     
+  <img  src="../../images/x2cdataview.PNG"></p>  	     
 
 14.	<p style='text-align: justify;'>In this window, select the variables that needs to be monitored. To do this, click on the source against each channel, a window Select Variables opens upon the screen. From the available list, the required variable can be chosen. Ensure check boxes Enable & Visible are checked for the variables to be plotted.</p>
 
     To view data plots continuously, uncheck Single-shot. When Single-shot is checked it captures the data once and stops. The Sample time factor value multiplied with Sample time determines the time difference between any two consecutive data points on the plot.
 
  <p align="center">
-  <img  src="../../images/x2cparameters.png"></p>
+  <img  src="../../images/x2cparameters.PNG"></p>
 
 15.	<p style='text-align: justify;'>Click on SAMPLE, then X2C scope window shows variables in real time, which is updated automatically.</p>
   <p align="center">
-  <img  src="../../images/x2csample.png"></p>
+  <img  src="../../images/x2csample.PNG"></p>
 
 16.	<p style='text-align: justify;'>Click on ABORT to stop.</p>
 
  <p align="center">
-  <img  src="../../images/x2cabort.png"></p>
+  <img  src="../../images/x2cabort.PNG"></p>
 
 ## REFERENCES:
 
