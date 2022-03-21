@@ -81,7 +81,7 @@ Note: Rated current of the board in External op amp configuration is 16.4 A.</p>
 <p style='text-align: justify;'>
 8. To program the device, a mini-USB connection is required between Host PC and the Development Board. Connect a mini-USB cable from your computer to the mini-USB connector “PROGRAM/DEBUG” of the Development Board. The development board features a Built-in isolated Programmer or Debugguer (Microchip Starter Kit).</p>
 <p align="center">
-  <img src="../../images/powercordconnection.PNG">
+  <img src="../../images/miniusbconnector.PNG">
 </p>
 <p style='text-align: justify;'>
 9. Power up the Development Board by connecting power cord to the mains. To verify the unit is powered, make sure LEDs D6, D13, D16 and D18 are ON.</p>
@@ -164,7 +164,27 @@ Define the Macro TORQUE_MODE, if the motor must run in Torque Control mode. If t
  <p align="center">
   <img  src="../../images/externalopampconfiguration.png">
   </p>
-  <p style='text-align: justify;'>
+
+### **Parameters to Enter in the tuning parameter excel sheet:**
+### **Board Parameters:**
+- **Board Peak voltage:** The Maximum measurable DC Bus voltage corresponding to Analog Channel voltage of 3.3V. By default, Board Peak Voltage for MCHV2/MCHV3 is 453V.
+- **Board Peak current:** The Maximum measurable Phase Current corresponding to Analog Channel voltage of 3.3V. By default, Board Peak current for MCHV2/MCHV3 in External OP AMP Configuration is 11A.
+- **PWM Period (Ts):** PWM Period is equal to 1/PWM switching frequency
+
+**Motor Parameters:**
+- **Pole pairs:** no of pole pairs of the motor.
+- **Stator resistance (Rs):** Stator Per Phase resistance in Ohms
+- **Magnetizing Inductance (Lm):** Magnetizing Inductance in Ohms. Magnetizing Inductance of the motor can by found by performing the NO-LOAD test on the motor.
+- **Nominal Speed:** The rated speed of the motor without field weakening in me-chanical RPM.
+- **Maximum Speed:** The Maximum speed of the motor with field weakening in mechanical RPM.
+- **Rated Phase Current:** The Motor Rated Phase RMS Current in AMPS.
+- **Magnetizing Current (Im):** Rated Magnetizing Phase RMS current in AMPS. This value can be found by running the motor in NO-LOAD test on the motor. The value is equal to No-load RMS Current of the motor.
+
+Enter the **Stator leakage inductance (Lls), Rotor Resistance (Rr), Rotor Leakage Inductance (Llr)** values only if the information is available, other wise we are assuming these parameters based on other available motor parameters.
+Enter the Motor Actual parameters and Generated parameters from tuning parameter excel sheet to **userparms.h.**
+
+  
+<p style='text-align: justify;'>
 6. Right click on the project acim.X and select “Properties” to open its Project Properties Dialog. Click the “Conf: [default]” category to reveal the general project configuration information.</p>
  <p style='text-align: justify;'>
     In the ‘Conf: [default]’ category window: 
@@ -241,6 +261,7 @@ The application firmware comes with initialization required to interface Control
 10.	<p style='text-align: justify;'>Remote Communication needs to be established, as indicated in the following figure. Ensure the communication baud rate is set to 115200 as the same is set in the application firmware, while COM port used depends on the system settings. Refresh button lists the available COM Ports. Select the COM Port as per the connection.</p>
  <p align="center">
   <img  src="../../images/x2cconnectionsetup.png"></p>
+  
 11.	<p style='text-align: justify;'>Once COM port detected, click on “Disconnected”, and it will be turn into “Connected”, if the link is established as programmed.</p>
   <p align="center">
   <img  src="../../images/x2cconnection.png"></p>
