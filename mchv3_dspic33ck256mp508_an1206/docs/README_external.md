@@ -45,11 +45,11 @@ Refer dsPICDEM™ MCHV-2 Development Board User’s Guide or dsPICDEM™ MCHV-3 
 
 | Jumper|Pins to Short|Board Reference |Remarks|
 | :--------:| :-----------:|:-----------------:|:---------------:|
-|J11        |3-4 | ![image](../../images/jumper1.png)|These Jumpers are present on the Development Board. These can be accessed only after opening the top cover of the enclosure.|
+|J11        |3-4 | ![image](../../images/jumper1.PNG)|These Jumpers are present on the Development Board. These can be accessed only after opening the top cover of the enclosure.|
 |J12|1-2|||
 | J12   | 1-2   | ||
 | J14   | 1-2 | ||
-| PWM OUTPUTS   | ENABLE position |![image](../../images/jumper1.PNG) |These Jumpers can be accessed without opening the enclosure, from the front side of the board(or enclosure).|
+| PWM OUTPUTS   | ENABLE position |![image](../../images/jumper2.PNG) |These Jumpers can be accessed without opening the enclosure, from the front side of the board(or enclosure).|
 | USB   | FOR USB position |![image](../../images/jumper3.PNG) ||
 <br />
 <p style='text-align: justify;'>
