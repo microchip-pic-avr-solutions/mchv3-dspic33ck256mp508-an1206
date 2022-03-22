@@ -42,16 +42,6 @@ Refer dsPICDEM™ MCHV-2 Development Board User’s Guide or dsPICDEM™ MCHV-3 
 <p style='text-align: justify;'> 
 2.  Open the top cover of the enclosure and set up the following jumpers (if they are not in specified positions):</p> 
 
-
-| Jumper|Pins to Short|Board Reference |Remarks|
-| :--------:| :-----------:|:-----------------:|:---------------:|
-|J11        |3-4 | ![image](../../images/jumper1.PNG)|These Jumpers are present on the Development Board. These can be accessed only after opening the top cover of the enclosure.|
-|J12|1-2|||
-| J12   | 1-2   | ||
-| J14   | 1-2 | ||
-| PWM OUTPUTS   | ENABLE position |![image](../../images/jumper2.PNG) |These Jumpers can be accessed without opening the enclosure, from the front side of the board(or enclosure).|
-| USB   | FOR USB position |![image](../../images/jumper3.PNG) ||
-<br />
 <p align="center">
   <img src="../../images/jumpertable.PNG">
 </p>
@@ -300,6 +290,13 @@ The application firmware comes with initialization required to interface Control
 
  <p align="center">
   <img  src="../../images/x2cabort.PNG"></p>
+
+### dsPIC® DSC RESOURCE USAGE SUMMARY
+#### Device Pin Mapping and Its Functionality in the Firmware:
+<p style='text-align: justify;'>The following table summarizes device pins configured and used in the AN1292 motor control application firmware demonstrated using the Development Board and the dsPIC33CK256MP508 External Op-Amp Motor Control PIM(MA330041-1). Refer “dsPIC33CK256MP508 External Op-Amp Motor Control Plug-in-Module (PIM) Information Sheet (DS50002756)” for more information.</p>
+
+ <p align="center">
+  <img  src="../../images/pinconfigurationtableinternal.PNG"></p>  
 
 ## REFERENCES:
 
