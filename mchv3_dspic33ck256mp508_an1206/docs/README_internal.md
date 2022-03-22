@@ -296,7 +296,7 @@ The application firmware comes with initialization required to interface Control
 <p style='text-align: justify;'>The following table summarizes device pins configured and used in the AN1292 motor control application firmware demonstrated using the Development Board and the dsPIC33CK256MP508 External Op-Amp Motor Control PIM(MA330041-1). Refer “dsPIC33CK256MP508 External Op-Amp Motor Control Plug-in-Module (PIM) Information Sheet (DS50002756)” for more information.</p>
 
  <p align="center">
-  <img width="500" height="600" src="../../images/pinconfigurationtableinternal.PNG"></p>  
+  <img width="600" height="800" src="../../images/pinconfigurationtableinternal.PNG"></p>  
 
 ## REFERENCES:
 
