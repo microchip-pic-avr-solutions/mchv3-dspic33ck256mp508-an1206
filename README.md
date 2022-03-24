@@ -17,7 +17,7 @@ The intent of this application note is to present sensorless Field Oriented Cont
 <p style='text-align: justify;'>
 A Phase-Locked Loop (PLL) estimator is implemented to estimate the speed and position of the rotor flux. Back-Electromagnetic Force (Back-EMF or BEMF) is used for estimating the speed and position of the rotor flux. When rotor flux is oriented along the d-axis, then the d-component of BEMF (ed) would be equal to 0. The estimator algorithm operates on the principle that the steady-state value of the d-axis component of the Back-EMF is equal to zero. This estimator implementation is similar to the PLL estimator employed in Microchip Application Note: AN1292, “Sensorless Field Oriented Control (FOC) for a Permanent Magnet Synchronous Motor (PMSM) Using a PLL Estimator and Field Weakening (FW)”. The block diagram of the PLL estimator is shown in Figure below.</p>
 <p align="center">
-  <img src="pllestimatorblockdiagram.PNG">
+  <img src="images/pllestimatorblockdiagram.PNG">
 </p>
 
 - Readme document for External op-amp configuration [Readme for External Op-Amp](mchv3_dspic33ck256mp508_an1206/docs/README_external.md)
