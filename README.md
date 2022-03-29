@@ -1,6 +1,6 @@
 ![image](images/microchip.jpg) 
 
-# MCHV3 DSPIC33CK256MP508 AN1206
+# MCHV3 dsPIC33CK256MP508 AN1206
 
 ## INTRODUCTION
 <p style='text-align: justify;'>
@@ -20,5 +20,21 @@ A Phase-Locked Loop (PLL) estimator is implemented to estimate the speed and pos
   <img src="images/pllestimatorblockdiagram.PNG">
 </p>
 
+### The following hardware tools are used for the demonstration:
+
+Use one of the High-Voltage Motor Control Development Boards mentioned below:
+- dsPICDEM™ MCHV-2 Development Board, [DM330023-2](https://www.microchip.com/en-us/development-tool/dm330023-2)
+- dsPICDEM™ MCHV-3 Development Board, [DM330023-3](https://www.microchip.com/en-us/development-tool/dm330023-3)
+- High Voltage 3-Phase AC Induction Motor, [AC300023](https://www.microchip.com/en-us/development-tool/AC300023)
+- dsPIC33CK256MP508 Internal Op-Amp Motor Control Plug-in module, [MA330041-2](https://www.microchip.com/en-us/development-tool/MA330041-2)
+- dsPIC33CK256MP508 External Op-Amp Motor Control Plug-in module, [MA330041-1](https://www.microchip.com/en-us/development-tool/MA330041-1)
+
+Maximum rated current of the induction motor (AC300023) used for the demonstration is 0.25A.  The default gain of the internal amplifier is 15, capable of measuring a maximum peak current of 11A. To improve the measurement accuracy, modify the amplifier gain so that the maximum peak current is 1A. 
 - Readme document for External op-amp configuration [Readme for External Op-Amp](mchv3_dspic33ck256mp508_an1206/docs/README_external.md)
+
+The default gain of the external amplifiers on the MCHV-2 or MCHV-3 is 10 (the maximum measurable peak current is 16.5A). 
+
+
+
+
 - Readme document for Internal op-amp configuration [Readme for Internal Op-Amp](mchv3_dspic33ck256mp508_an1206/docs/README_internal.md)

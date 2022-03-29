@@ -1,6 +1,6 @@
 ![image](../../images/microchip.jpg) 
 
-# AN1206 Demonstration ReadMe for the dsPICDEM™ MCHV-2 Development Board or dsPICDEM™ MCHV-3 Development Board with the dsPIC33CK256MP508 Inernal Op-Amp Motor Control PIM(MPLAB® X IDE)
+# AN1206 Demonstration ReadMe for the dsPICDEM™ MCHV-2 Development Board or dsPICDEM™ MCHV-3 Development Board with the dsPIC33CK256MP508 Internal Op-Amp Motor Control PIM(MPLAB® X IDE)
 
 ## INTRODUCTION
 <p style='text-align: justify;'>
@@ -25,9 +25,9 @@ To set up the demonstration, you may use one of the High-Voltage Motor Control D
 - dsPICDEM™ MCHV-2 Development Board, Part-No. [DM330023-2](https://www.microchip.com/en-us/development-tool/dm330023-2)
 - dsPICDEM™ MCHV-3 Development Board [DM330023-3](https://www.microchip.com/en-us/development-tool/dm330023-3)
 > **_NOTE:_**
->In this document, hereinafter High-Voltage Motor Control Development Board selected for setting up the demonstration is referred as Development Board..
-- High Voltage 3-Phase AC Induction Motor, Part-No. [AC300023](https://www.microchip.com/en-us/development-tool/AC300023)  
-- dsPIC33CK256MP508 Internal Op-Amp Motor Control Plug-in module, Part-No. [AC300023](https://www.microchip.com/en-us/development-tool/MA330041-2)
+>In this document, hereinafter High-Voltage Motor Control Development Board selected for setting up the demonstration is referred as Development Board. 
+- High Voltage 3-Phase AC Induction Motor.
+- dsPIC33CK256MP508 Internal Op-Amp Motor Control Plug-in module, Part-No. [MA330041-2](https://www.microchip.com/en-us/development-tool/MA330041-2)
 <br />
 
 > **_NOTE:_**
@@ -58,14 +58,12 @@ Refer dsPICDEM™ MCHV-2 Development Board User’s Guide or dsPICDEM™ MCHV-3 
 </p>
 
 <p style='text-align: justify;'>
-5. The rated current of Induction Motor (AC300023) is 0.25 A, and the default rated current of the Board in Internal Op Amp Configuration is 11A. To increase the resolution please modify the rated current of the Board in Internal Op Amp Configuration from 11A to 1A by changing the gains of the current Amplifier.</p>
+5.  Maximum rated current of the induction motor (Part-No. AC300023) used for the demonstration is 0.25A.  The default gain of the internal amplifier is 15, capable of measuring a maximum peak current of 11A. To improve the measurement accuracy, modify the amplifier gain so that the maximum peak current is 1A.</p>
 
-Modify the **R6,R5,R13,R12** from **30k to 330k** ohm resistors.
+Modify the value of resistors **R6,R5,R13,R12** from **30k to 330k** ohm to change the measureable peak current from 11A to 1A.
 <p align="center">
   <img src="../../images/internalopampconfig.PNG">
 </p>
-<p style='text-align: justify;'>
-Note: if the Rated current of the motor is more than 1A, then there is no need to modify the gains of the internal Op Amp, during that case the rated current of the board in internal op amp configuration is 11A.</p>
 <p style='text-align: justify;'>
 6. Insert the dsPIC33CK256MP508 Internal Op-Amp Motor Control PIM into the PIM Socket U11 provided on the Development Board. Make sure the PIM is correctly placed and oriented before proceeding.</p>
 
@@ -94,18 +92,17 @@ Install MPLAB X IDE and MPLAB XC16 Compiler versions that support the device dsP
 
 <p style='text-align: justify;'>If MPLAB IDE v8 or earlier is already installed on your computer, then run the MPLAB driver switcher (It is installed when MPLAB®X IDE is installed) to switch from MPLAB IDE v8 drivers to MPLAB X IDE drivers. If you have Windows 7 or 8, you must run MPLAB driver switcher in ‘Administrator Mode’. To run the Device Driver Switcher GUI application as administrator, right click on the executable (or desktop icon) and select ‘Run as Administrator’. For additional details refer MPLAB X IDE help topic “Before You Begin: Install the USB Device Drivers (For Hardware Tools): USB Driver Installation for Windows Operating Systems”. </p>
 
-### Setup: X2C - SCOPE
+### Setup: X2C - Scope
 <p style='text-align: justify;'>
-X2C - SCOPE is a MPLAB X IDE plugin that allows a developer to interact with an application while the application program is running. X2C-Scope enables you to read, write, and plot global variables (for motor control) in real time. It communicates with the target using the UART. To use X2C, the plugin must be installed:</p>
+X2C - Scope is a MPLAB X IDE plugin that allows a developer to interact with an application while the application program is running. X2C-Scope enables you to read, write, and plot global variables (for motor control) in real time. It communicates with the target using the UART. To use X2C, the plugin must be installed:</p>
 
 - In MPLAB X IDE, select Tools>Plugins and click on the Available Plugins tab.
-- Select X2C - SCOPE plug-in by checking its check box, and then click Install.
-- Look for tool X2C - SCOPE under Tools>Embedded.
+- Select X2C - Scope plug-in by checking its check box, and then click Install.
+- Look for tool X2C - Scope under Tools>Embedded.
 
 <p align="center">
   <img src="../../images/x2cinstall.PNG">
 </p>
-<br />
 
 ##  BASIC DEMONSTRATION
 ### Firmware Description
@@ -123,7 +120,7 @@ For more details refer Microchip Application note AN1206 “Sensorless Field Ori
 
 > **_NOTE:_**
 > The project may not build correctly in Windows OS if Maximum path length of any source file in the project is more than 260 characters. In case absolute path is exceeding or nearing maximum length, do any (or both) of the following:
- > - Shorten the name of the directory containing the firmware used in this demonstration. In this case, rename directory AN1206_dsPIC33CK256MP508_EXT_INT_OPAMP_MCHV2_MCHV3 to more ap-propriate shorter name. In case you renamed the directory, consider the new name while reading instructions provided in the upcoming sections of the document. 
+ > - Shorten the name of the directory containing the firmware used in this demonstration. In this case, rename directory AN1206_dsPIC33CK256MP508_EXT_INT_OPAMP_MCHV2_MCHV3 to more appropriate shorter name. In case you renamed the directory, consider the new name while reading instructions provided in the upcoming sections of the document. 
 > - Place firmware in a location, such that absolute path length of each file included in the projects does not exceed the Maximum Path length specified. 
 For details, refer MPLAB X IDE help topic “Path, File and Folder Name Restrictions”.
 
@@ -152,13 +149,13 @@ Define the Macro OPEN_LOOP_FUNCTIONING, if the motor must run in Open loop (V/F)
 Define the Macro TORQUE_MODE, if the motor must run in Torque Control mode. If the Macro OPEN_LOOP_FUNCTIONING is defined, then motor will run in Speed Con-trol mode.</p>
   
 <p style='text-align: justify;'>
-4. Open userparams.h (under acim.X -> headerfiles) in the project acim.X and ensure INTERNAL_OPAMP_CONFIGPIM is undefined as this demonstration is for Internal Op-Amp configuration.</p>
+4. Open userparams.h (under acim.X -> headerfiles) in the project acim.X and ensure INTERNAL_OPAMP_CONFIGPIM is defined as this demonstration is for Internal Op-Amp configuration.</p>
   <p align="center">
-  <img  src="../../images/undefinternalopamp.PNG">
+  <img  src="../../images/internalopampselection.PNG">
   </p>
 
   <p style='text-align: justify;'>
-5. Open userparams.h (under acim.X -> headerfiles) in the project acim.X and ensure the required Motor is defined and the Board and Motor parameters are corre-sponding to Internal Op-Amp design from the tuning parameter excel sheet in docs folder</p>
+5. Open userparams.h (under acim.X -> headerfiles) in the project acim.X and ensure the required Motor is defined and the Board and Motor parameters are corresponding to Internal Op-Amp design from the tuning parameter excel sheet in docs folder.</p>
  <p align="center">
   <img  src="../../images/internalconfigsetup.PNG">
   </p>
@@ -166,9 +163,9 @@ Define the Macro TORQUE_MODE, if the motor must run in Torque Control mode. If t
 ### **Parameters to Enter in the tuning parameter excel sheet:**
 ### **Board Parameters:**
 - **Board Peak voltage:** The Maximum measurable DC Bus voltage corresponding to Analog Channel voltage of 3.3V. By default, Board Peak Voltage for MCHV2/MCHV3 is 453V.
-- **Board Peak current:** The Maximum measurable Phase Current corresponding to Analog Channel voltage of 3.3V. By default, Board Peak current for MCHV2/MCHV3 in Internal OP AMP Configuration is 11A.
+- **Board Peak current:** The Maximum measurable Phase Current corresponding to Analog Channel voltage of 1.65V. For running ZD Motor,Part-No. [AC300023](https://www.microchip.com/en-us/development-tool/AC300023) the gains of the internal op Amp Module are modified and the Modified Board Peak Current is 1A.
+See Point #5 in [Hardware setup](#hadware-setup)
 
-    **Note:** For running **ZD Motor** the gains of the internal op Amp Module are modified and the Modified Board Peak Current is 1A.
 - **PWM Period (Ts):** PWM Period is equal to 1/PWM switching frequency
 
 **Motor Parameters:**
@@ -190,7 +187,7 @@ Enter the Motor Actual parameters and Generated parameters from tuning parameter
     In the ‘Conf: [default]’ category window: 
 
 - Select the specific Compiler Toolchain from the available list of compilers. Please ensure MPLAB® XC16 Compiler supports the device dsPIC33CK256MP508. In this case “XC16(v1.70)” is selected. The compiler used for testing the firmware is listed in the section Software Tools Used for Testing the firmware.
-- Select the Hardware Tool to be used for programming and debugging. In this case, “PKOB” is selected as the programmer from Connected Hardware Tools section.
+- Select the Hardware Tool to be used for programming and debugging. In this case, “PKoB” is selected as the programmer from Connected Hardware Tools section.
 
 - After selecting Hardware Tool and Compiler Toolchain, click button Apply
  <p align="center">
