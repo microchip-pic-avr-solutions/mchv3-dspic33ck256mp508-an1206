@@ -59,7 +59,7 @@ controllers, tuning mode will disable the speed PI controller and undef to run i
 #ifdef INTERNAL_OPAMP_CONFIG
     #define MC1_PEAK_CURRENT            1    /* I Base *//* 11A for Unmodified Gain*/ 
 #else
-    #define MC1_PEAK_CURRENT            16.4    /* I Base */
+    #define MC1_PEAK_CURRENT            16.5    /* I Base */
 #endif    
 
 /* Define to run ZD Induction motor*/    
@@ -169,14 +169,14 @@ controllers, tuning mode will disable the speed PI controller and undef to run i
         /* the calculation of Rs gives a value exceeding the Q15 range so,
          the normalized value is further divided by 2^NORM_RS_SCALE to fit the 32768 limit
          this is taken care in the estim.c  */
-        #define NORM_RS 16438
+        #define NORM_RS 16538
         #define NORM_RS_SCALE   4   /* 2^NORM_RS_SCALE is the scaling */ 
         #define NORM_RS_SCALE_SHIFT (15 - NORM_RS_SCALE)  
         /* Normalized Sigmals/dt value */
         /* the calculation of NORM_SIGMA_LSDTBASE gives a value exceeding the Q15 range so,
          the normalized value is further divided by 2^NORM_SIGMA_LSDTBASE_SCALE to fit the 32768 limit
          this is taken care in the estim.c  */
-        #define NORM_SIGMA_LSDTBASE 21452   
+        #define NORM_SIGMA_LSDTBASE 21583   
         #define NORM_SIGMA_LSDTBASE_SCALE 10    /* 2^NORM_LSDTBASE_SCALE is the scaling */
         #define NORM_SIGMA_LSDTBASE_SCALE_SHIFT   (15- NORM_SIGMA_LSDTBASE_SCALE)    
         /* Normalized 1/(Lm^2/Lr) value */
@@ -193,7 +193,7 @@ controllers, tuning mode will disable the speed PI controller and undef to run i
         /* Normalized Inverse rotor time constant*/
         #define NORM_INVTR 2501    
         /* Normalized Stator Inductance (Lm + Lls)*/
-        #define NORM_LS 26923
+        #define NORM_LS 27088
         #define NORM_LS_SCALE 7    
         /* Limitation constants */
         /* di = i(t1)-i(t2) limitation

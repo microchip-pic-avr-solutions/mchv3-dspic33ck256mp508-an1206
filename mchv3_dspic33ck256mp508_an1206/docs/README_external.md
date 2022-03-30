@@ -6,7 +6,7 @@
 <p style='text-align: justify;'>
 This document describes the setup requirements for running the Sensor-less FOC algorithm for an Induction Motor, which is referenced in AN1206 “Sensorless Field Oriented Control (FOC) of a Three-Phase AC Induction Motor (ACIM)” </p>
 <p style='text-align: justify;'>
-The demonstration is configured to run on either the dsPICDEM™ MCHV-2 Development Board or the dsPICDEM™ MCHV-3 Development Board in the External Op-Amp configuration with the dsPIC33CK256MP508 Internal Op-Amp Motor Control Plug-In Module (PIM).
+The demonstration is configured to run on either the dsPICDEM™ MCHV-2 Development Board or the dsPICDEM™ MCHV-3 Development Board in the External Op-Amp configuration with the dsPIC33CK256MP508 External Op-Amp Motor Control Plug-In Module (PIM).
 </p>
 
 ## Hardware Connection and Running the Demo Code
@@ -26,8 +26,8 @@ To set up the demonstration, you may use one of the High-Voltage Motor Control D
 - dsPICDEM™ MCHV-3 Development Board [DM330023-3](https://www.microchip.com/en-us/development-tool/dm330023-3)
 > **_NOTE:_**
 >In this document, hereinafter High-Voltage Motor Control Development Board selected for setting up the demonstration is referred as Development Board..
-- High Voltage 3-Phase AC Induction Motor, Part-No. [AC300023](https://www.microchip.com/en-us/development-tool/AC300023)  
-- dsPIC33CK256MP508 Internal Op-Amp Motor Control Plug-in module, Part-No. [AC300023](https://www.microchip.com/en-us/development-tool/MA330041-2)
+- High Voltage 3-Phase AC Induction Motor. 
+- dsPIC33CK256MP508 External Op-Amp Motor Control Plug-in module, Part-No. [MA330041-1](https://www.microchip.com/en-us/development-tool/MA330041-1)
 <br />
 
 > **_NOTE:_**
@@ -38,7 +38,7 @@ To set up the demonstration, you may use one of the High-Voltage Motor Control D
 <p style='text-align: justify;'>
 Refer dsPICDEM™ MCHV-2 Development Board User’s Guide or dsPICDEM™ MCHV-3 Development Board User’s Guide, for any clarification while setting up the hardware.</p>
 <p style='text-align: justify;'>
-1.  Before making any connection, verify that the Development Board is not powered and it is fully discharged. This can be done by checking if Power on Status LED D13(Red) is off.</p>
+1. Before making any connection, verify that the Development Board is not powered and it is fully discharged. This can be done by checking if Power on Status LED D13(Red) is off.</p>
 <p style='text-align: justify;'> 
 2.  Open the top cover of the enclosure and set up the following jumpers (if they are not in specified positions):</p> 
 
@@ -57,7 +57,7 @@ Refer dsPICDEM™ MCHV-2 Development Board User’s Guide or dsPICDEM™ MCHV-3 
   <img src="../../images/matrixboard.PNG">
 </p>
 <p style='text-align: justify;'>
-Note: Rated current of the board in External op amp configuration is 16.4 A.</p>
+Note: Rated current of the board in External op amp configuration is 16.5 A.</p>
 </br>
 <p style='text-align: justify;'>
 5. Insert the dsPIC33CK256MP508 External Op-Amp Motor Control PIM into the PIM Socket U11 provided on the Development Board. Make sure the PIM is correctly placed and oriented before proceeding.</p>
@@ -150,7 +150,7 @@ Define the Macro TORQUE_MODE, if the motor must run in Torque Control mode. If t
   </p>
 
   <p style='text-align: justify;'>
-5. Open userparams.h (under acim.X -> headerfiles) in the project acim.X and ensure the required Motor is defined and the Board and Motor parameters are corre-sponding to External Op-Amp design from the tuning parameter excel sheet in docs folder</p>
+5. Open userparams.h (under acim.X -> headerfiles) in the project acim.X and ensure the required Motor is defined and the Board and Motor parameters are corresponding to External Op-Amp design from the tuning parameter excel sheet in docs folder</p>
  <p align="center">
   <img  src="../../images/externalopampconfiguration.PNG">
   </p>
@@ -158,7 +158,7 @@ Define the Macro TORQUE_MODE, if the motor must run in Torque Control mode. If t
 ### **Parameters to Enter in the tuning parameter excel sheet:**
 ### **Board Parameters:**
 - **Board Peak voltage:** The Maximum measurable DC Bus voltage corresponding to Analog Channel voltage of 3.3V. By default, Board Peak Voltage for MCHV2/MCHV3 is 453V.
-- **Board Peak current:** The Maximum measurable Phase Current corresponding to Analog Channel voltage of 3.3V. By default, Board Peak current for MCHV2/MCHV3 in External OP AMP Configuration is 11A.
+- **Board Peak current:** The Maximum measurable Phase Current corresponding to Analog Channel voltage of 1.65V. By default, Board Peak current for MCHV2/MCHV3 in External OP AMP Configuration is 16.5A.
 - **PWM Period (Ts):** PWM Period is equal to 1/PWM switching frequency
 
 **Motor Parameters:**
