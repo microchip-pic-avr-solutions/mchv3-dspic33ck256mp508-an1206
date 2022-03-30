@@ -30,11 +30,20 @@ Use one of the High-Voltage Motor Control Development Boards mentioned below:
 - dsPIC33CK256MP508 External Op-Amp Motor Control Plug-in module, [MA330041-1](https://www.microchip.com/en-us/development-tool/MA330041-1)
 
 Maximum rated current of the induction motor (AC300023) used for the demonstration is 0.25A.  The default gain of the internal amplifier is 15, capable of measuring a maximum peak current of 11A. To improve the measurement accuracy, modify the amplifier gain so that the maximum peak current is 1A. 
-- Readme document for External op-amp configuration [Readme for External Op-Amp](mchv3_dspic33ck256mp508_an1206/docs/README_external.md)
+
+- Readme document for Internal op-amp configuration [Readme for Internal Op-Amp](mchv3_dspic33ck256mp508_an1206/docs/README_internal.md)
 
 The default gain of the external amplifiers on the MCHV-2 or MCHV-3 is 10 (the maximum measurable peak current is 16.5A). 
 
+- Readme document for External op-amp configuration [Readme for External Op-Amp](mchv3_dspic33ck256mp508_an1206/docs/README_external.md)
+
+</br>
+
+> **NOTE :**
+> - <p style='text-align: justify;'> The hardware setting for internal opamp configuration is altered to get a peak current of 1A. This is done to enable MCHV-2 or MCHV-3 board to run the  induction motor -AC300023 whose maximum rated current is only 0.25A.</p>
+> - <p style='text-align: justify;'>The hardware setting for external opamp configuration is left unaltered (with a peak current of 16.5A). This enables user to run higher power motors on MCHV-2 or MCHV-3 board. But, with the default external amplifier gain settings, the induction motor - AC300023 may not run properly or may stall at certain speeds, due to lower current resolution.</p>
 
 
 
-- Readme document for Internal op-amp configuration [Readme for Internal Op-Amp](mchv3_dspic33ck256mp508_an1206/docs/README_internal.md)
+
+
